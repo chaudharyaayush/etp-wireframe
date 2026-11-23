@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1769e0" />
+  <meta name="description" content="Elite Tutoring Perth student learning portal wireframe." />
+  <title>ETP Learning Portal | Elite Tutoring Perth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <section class="login-screen" id="loginScreen">
+      <div class="login-left">
+        <div class="brand brand-login">
+          <div class="brand-mark">ETP<span>.</span></div>
+          <div class="brand-copy"><strong>ELITE TUTORING</strong><span>PERTH</span></div>
+        </div>
+        <div class="login-hero">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR LEARNING, ELEVATED</div>
+          <h1>Small steps.<br><span>Big results.</span></h1>
+          <p>Your dedicated space to learn smarter, stay organised, and see how far you’ve come.</p>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="hero-card hero-card-main">
+              <div class="mini-label">YOUR PROGRESS</div>
+              <div class="hero-score">+18.4% <span>↗</span></div>
+              <div class="mini-bars"><i style="height:30%"></i><i style="height:44%"></i><i style="height:38%"></i><i style="height:61%"></i><i style="height:54%"></i><i style="height:78%"></i><i style="height:92%"></i></div>
+              <div class="mini-card-foot"><span>Keep showing up</span><span class="pink-dot"></span></div>
+            </div>
+            <div class="floating-note"><span class="floating-icon">✓</span><div><strong>One task at a time</strong><small>You’re building momentum.</small></div></div>
+            <div class="floating-star">✳</div>
+          </div>
+        </div>
+        <div class="login-footer">© 2026 Elite Tutoring Perth <span>•</span> Built for your ATAR journey</div>
+      </div>
+      <div class="login-right">
+        <div class="login-mobile-brand brand">
+          <div class="brand-mark">ETP<span>.</span></div><div class="brand-copy"><strong>ELITE TUTORING</strong><span>PERTH</span></div>
+        </div>
+        <div class="login-form-wrap">
+          <div class="welcome-kicker">WELCOME BACK</div>
+          <h2>Let’s get you<br>back on track.</h2>
+          <p class="muted login-subtitle">Choose your portal and sign in to continue.</p>
+          <div class="role-switch" role="group" aria-label="Choose account type">
+            <button class="role-option active" data-role="student"><span class="role-icon">♙</span><span><strong>Student</strong><small>My learning space</small></span></button>
+            <button class="role-option" data-role="admin"><span class="role-icon">▦</span><span><strong>Admin</strong><small>Manage the portal</small></span></button>
+          </div>
+          <form id="loginForm">
+            <label for="email">Email address</label>
+            <div class="input-wrap"><span class="input-icon">✉</span><input id="email" type="email" autocomplete="username" value="student@etp.demo" required /></div>
+            <label for="password">Password</label>
+            <div class="input-wrap"><span class="input-icon">⌑</span><input id="password" type="password" autocomplete="current-password" value="Student123!" required /><button type="button" class="show-password" id="togglePassword">Show</button></div>
+            <div class="form-row"><label class="remember"><input type="checkbox" checked> <span>Remember me</span></label><button type="button" class="text-button" id="forgotBtn">Forgot password?</button></div>
+            <button class="primary-btn login-submit" type="submit">Sign in to portal <span>→</span></button>
+            <p class="login-error" id="loginError" role="alert"></p>
+          </form>
+          <div class="demo-credentials">
+            <div class="demo-head"><span class="demo-key">✦</span><div><strong>Demo access</strong><small>Use these sample credentials to explore.</small></div><button id="toggleDemo" aria-label="Toggle demo credentials">⌄</button></div>
+            <div class="demo-details" id="demoDetails">
+              <div class="credential-row"><span>Student</span><button data-fill="student">student@etp.demo <b>↗</b></button></div>
+              <div class="credential-row"><span>Admin</span><button data-fill="admin">admin@etp.demo <b>↗</b></button></div>
+              <small class="demo-password">Password: <code>Student123!</code> for student · <code>Admin123!</code> for admin</small>
+            </div>
+          </div>
+          <div class="login-legal">This is a front-end concept prototype. Demo accounts only.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal hidden" id="portal">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">ETP<span>.</span></div>
+          <div class="brand-copy"><strong>ELITE TUTORING</strong><span>PERTH</span></div>
+        </div>
+        <div class="sidebar-role"><span class="role-pill" id="rolePill">STUDENT PORTAL</span></div>
+        <div class="profile-mini">
+          <div class="avatar" id="sidebarAvatar">AC</div>
+          <div class="profile-mini-copy"><strong id="sidebarName">Alex Carter</strong><span id="sidebarYear">Year 12 ATAR</span></div>
+          <button class="icon-btn profile-more" title="Account options" data-page="account">•••</button>
+        </div>
+        <nav id="sideNav" aria-label="Main navigation"></nav>
+        <div class="sidebar-bottom">
+          <div class="help-card"><div class="help-bubble">?</div><strong>Need a hand?</strong><p>We’re here to help you stay on track.</p><a href="https://www.elitetutoringperth.com.au/" target="_blank" rel="noreferrer">Contact ETP <span>↗</span></a></div>
+          <button class="logout-btn" id="logoutBtn"><span>↪</span> Log out</button>
+        </div>
+      </aside>
+      <div class="mobile-overlay" id="mobileOverlay"></div>
+      <main class="main-area">
+        <header class="topbar">
+          <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="breadcrumbCurrent">Overview</strong></div>
+          <div class="topbar-actions">
+            <button class="icon-btn notification-btn" id="notificationBtn" title="Notifications">♧<i></i></button>
+            <div class="topbar-divider"></div>
+            <button class="top-user" data-page="account"><div class="avatar avatar-small" id="topAvatar">AC</div><span><strong id="topName">Alex Carter</strong><small id="topRole">Student</small></span><b>⌄</b></button>
+          </div>
+        </header>
+        <div class="page-wrap" id="pageContent"></div>
+        <footer class="portal-footer"><span>© 2026 Elite Tutoring Perth</span><span>Learn with purpose. Grow with confidence. <b>✦</b></span></footer>
+      </main>
+      <div class="toast" id="toast" role="status"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
